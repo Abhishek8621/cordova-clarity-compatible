@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="@microsoft/cordova-clarity" version="3.0.0">
+
+    <name>Clarity</name>
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0" />
+    </engines>
+
+    <asset src="www/clarity_plugin.js" target="js/clarity_plugin.js" />
+
+    <js-module src="www/clarity_plugin.js" name="ClarityPlugin">
+        <clobbers target="ClarityPlugin" />
+    </js-module>
+
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <!-- Could not get it down to 19 as the Cordova dependenices require it to be 21+ -->
+            <preference name="android-minSdkVersion" value="21" />
+            <preference name="android-targetSdkVersion" value="35" />
+
+            <feature name="ClarityPlugin">
+                <param name="android-package" value="com.microsoft.clarity.cordova.ClarityPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ClarityPlugin.java" target-dir="src/com/microsoft/clarity/cordova/"/>
+
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+
+    </platform>
+
+    <dependency id="cordova-plugin-device" version=">=2.1.0" />
+
+</plugin>

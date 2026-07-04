@@ -1,0 +1,8 @@
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation "com.microsoft.clarity:clarity:3.3.0"
+}
