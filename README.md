@@ -127,6 +127,15 @@ let clarityConfig = {
 
 ### Notes:
 - Clarity requires `cordova-android` version +`14.0.0`.
+- Clarity iOS requires `cordova-ios` version +`7.0.0` and iOS 15+.
+
+## iOS
+
+The iOS implementation uses the [Microsoft Clarity iOS SDK](https://learn.microsoft.com/en-us/clarity/mobile-sdk/ios-sdk) via Swift Package Manager (`clarity-apps` 3.3.0). Rebuild the iOS platform after installing or updating the plugin:
+
+```shell
+cordova prepare ios
+```
 
 ## License
 

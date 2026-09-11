@@ -1,18 +1,20 @@
 {
   "name": "@microsoft/cordova-clarity",
-  "version": "3.0.0",
-  "description": "A plugin to provide the Clarity experience for the Cordova applications.",
+  "version": "3.1.0",
+  "description": "A plugin to provide the Clarity experience for Cordova applications on Android and iOS.",
   "cordova": {
     "id": "@microsoft/cordova-clarity",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "cordova-ios"
   ],
-  "repository": "https://github.com/microsoft/clarity-apps",
+  "repository": "https://github.com/Abhishek8621/cordova-clarity-compatible",
   "author": "Microsoft - Clarity <clarity-apps-support@microsoft.com> (https://github.com/microsoft/clarity-apps)",
   "license": "MIT",
   "bugs": {

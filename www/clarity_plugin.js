@@ -1,8 +1,6 @@
 function isClarityUnavailable() {
-  if (device.platform !== "Android") {
-    let message = "Clarity supports Android only for now.";
-    console.warn(message);
-    error(message);
+  if (device.platform !== "Android" && device.platform !== "iOS") {
+    console.warn("Clarity supports Android and iOS only.");
     return true;
   }
 

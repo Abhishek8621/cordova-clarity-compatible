@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="@microsoft/cordova-clarity" version="3.0.0">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="@microsoft/cordova-clarity" version="3.1.0">
 
     <name>Clarity</name>
 
     <engines>
         <engine name="cordova" version=">=3.4.0" />
+        <engine name="cordova-ios" version=">=7.0.0" />
     </engines>
 
     <asset src="www/clarity_plugin.js" target="js/clarity_plugin.js" />
@@ -29,6 +30,16 @@
 
         <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
 
+    </platform>
+
+    <platform name="ios" package="swift">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ClarityPlugin">
+                <param name="ios-package" value="ClarityPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/ClarityPlugin.swift" />
     </platform>
 
     <dependency id="cordova-plugin-device" version=">=2.1.0" />
